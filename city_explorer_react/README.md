@@ -6,6 +6,6 @@ Estimate of time needed to complete: 2 hours
 
 Start time: 0900
 
-Finish time: 1130
+Finish time: 1030
 
-Actual time needed to complete: 2 hours 30 mins
+Actual time needed to complete: 1 hours 30 mins
