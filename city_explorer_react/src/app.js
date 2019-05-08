@@ -1,5 +1,16 @@
 import React from 'react';
 
+class App extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Header />
+        <Main />
+      </React.Fragment>
+    );
+  }
+}
+
 const Header = () => {
   return (
     <header>
@@ -9,53 +20,67 @@ const Header = () => {
   );
 };
 
-class Content extends React.Component {
+class Main extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      number: 0,
+      word: 'search',
     };
   }
 
   handleWord = e => {
-    let number = e.target.value;
-    this.setState({ number });
+    let word = e.target.value;
+    this.setState({ word });
   };
 
-  handleClickPositive = e => {
+  handleSubmit = e => {
     e.preventDefault();
-    let number = this.state.number
-      number++
-    this.setState({ number });
-  };
-
-  handleClickNegative = e => {
-    e.preventDefault();
-    let number = this.state.number
-      number--
-    this.setState({ number });
   };
 
   render() {
     return (
+      <React.Fragment>
+        <Search />
+        <Map />
+        <Result />
+        <Result />
+        <Result />
+        <Result />
+        <Result />
+      </React.Fragment>
+    );
+  }
+}
+
+class Search extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <input onChange={this.handleWord} />
+        <button onClick={this.handleSubmit}>Submit</button>
+      </React.Fragment>
+    );
+  }
+}
+
+class Map extends React.Component {
+  render() {
+    return (
       <div>
-        <p>{this.state.number}</p>
-        <button onClick={this.handleClickPositive}>+</button>
-        <button onClick={this.handleClickNegative}>-</button>
+        <p>google map here</p>
       </div>
     );
   }
 }
 
-class App extends React.Component {
+class Result extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <Header />
-        <Content />
-      </React.Fragment>
-    );
+      <section>
+        <p>lorem ipsum</p>
+      </section>
+    )
   }
 }
 
