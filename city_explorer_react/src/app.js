@@ -1,24 +1,22 @@
 import React from 'react';
 
+import Header from './header';
+import Map from './map';
+import Result from './result';
+
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Header />
+        <SearchForm />
+        <Map />
+        <SearchResults />
         <Main />
       </React.Fragment>
     );
   }
 }
-
-const Header = () => {
-  return (
-    <header>
-      <h1>City Explorer</h1>
-      <p>Enter a location below to learn about the weather, events, restaurants, movies filmed there, and more!</p>
-    </header>
-  );
-};
 
 class Main extends React.Component {
   constructor(props) {
@@ -61,26 +59,6 @@ class Search extends React.Component {
         <button onClick={this.handleSubmit}>Submit</button>
       </React.Fragment>
     );
-  }
-}
-
-class Map extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>google map here</p>
-      </div>
-    );
-  }
-}
-
-class Result extends React.Component {
-  render() {
-    return (
-      <section>
-        <p>lorem ipsum</p>
-      </section>
-    )
   }
 }
 
