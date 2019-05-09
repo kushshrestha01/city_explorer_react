@@ -3,60 +3,47 @@ import React from 'react';
 import Header from './header';
 import Map from './map';
 import Result from './result';
+import SearchForm from './search-form';
+// import Data from './search-form';
+
+// import SearchResults from './search-results';
 
 class App extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <Header />
-        <SearchForm />
-        <Map />
-        <SearchResults />
-        <Main />
-      </React.Fragment>
-    );
-  }
-}
-
-class Main extends React.Component {
+  
   constructor(props) {
     super(props);
 
     this.state = {
-      word: 'search',
+      lat: '',
+      lng: '',
+      search_query: '',
+      formatted_query: '',
     };
   }
 
-  handleWord = e => {
-    let word = e.target.value;
-    this.setState({ word });
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
-  };
-
-  render() {
-    return (
-      <React.Fragment>
-        <Search />
-        <Map />
-        <Result />
-        <Result />
-        <Result />
-        <Result />
-        <Result />
-      </React.Fragment>
-    );
+  passLocation = (location) => {
+    this.setState({
+      lat: location.latitude,
+      lng: location.longitude,
+      search_query: location.search_query,
+      formatted_query: location.formatted_query,
+    });
   }
-}
 
-class Search extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <input onChange={this.handleWord} />
-        <button onClick={this.handleSubmit}>Submit</button>
+        <Header />
+        <SearchForm passLocation={this.passLocation}/>
+        <Map 
+          lat = {this.state.lat}
+          lng = {this.state.lng}
+        />
+        {/* <SearchResults /> */}
+        <Result 
+        lat = {this.state.lat}
+        lng = {this.state.lng}
+        />
       </React.Fragment>
     );
   }
