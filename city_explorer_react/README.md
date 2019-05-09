@@ -6,8 +6,9 @@ Estimate of time needed to complete: 2 hours
 
 Start time: 0900
 
-Finish time: 1130
+Finish time: 1030
 
+<<<<<<< HEAD
 Actual time needed to complete: 2 hours 30 mins
 
 # City Explorer - Part 2
@@ -21,3 +22,6 @@ Start time: 0900
 Finish time: _____
 
 Actual time needed to complete: _____
+=======
+Actual time needed to complete: 1 hours 30 mins
+>>>>>>> 8f3836a87d7c9b72a0c6ce0050b61369656a14f2
