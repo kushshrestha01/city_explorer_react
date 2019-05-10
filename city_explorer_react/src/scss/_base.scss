@@ -1,0 +1,26 @@
+body {
+  background: $grey;
+  font-family: $font_std;
+  font-size: 1.5vw;
+}
+
+.body {
+  display: flex;
+  flex-wrap: nowrap;
+
+  yelp {
+    outline:solid
+  }
+}
+
+.body > div {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 10px;
+  border-style: solid;
+  text-align: center;
+  line-height: 75px;
+  font-size: 15px;
+  outline: solid;
+}
+

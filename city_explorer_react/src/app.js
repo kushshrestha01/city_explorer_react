@@ -39,6 +39,7 @@ class App extends React.Component {
           lat = {this.state.location.latitude}
           lng = {this.state.location.longitude}
         />
+        <div class = 'body'>
         
         <Weather googleDataObject = {this.state.location} />
 
@@ -47,6 +48,8 @@ class App extends React.Component {
         <Movies googleDataObject = {this.state.location}/>
 
         <Yelp googleDataObject = {this.state.location}/>
+
+        </div>
 
       </React.Fragment>
     );

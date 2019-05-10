@@ -1,0 +1,30 @@
+main {
+  border: solid 2px $black;
+  padding: $gutter_std / 2;
+  min-height: 100px;
+}
+
+header {
+  background: $grey;
+  font-size: 1.5vw;
+  text-align: center;
+  padding: $gutter_std;
+
+  a {
+      color: $white;
+  }
+}
+
+form {
+  text-align: center;
+}
+
+.map {
+  text-align: center;
+}
+
+footer {
+  background: $black;
+  color: $white;
+  padding: $gutter_std;
+}
