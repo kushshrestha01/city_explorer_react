@@ -10,10 +10,9 @@ class Movies extends React.Component {
   }
 
   movieResults = async e => {
-    console.log(this.props.googleDataObject);
   let movieData = await superagent(`https://city-explorer-backend.herokuapp.com/movies`)
     .query({data: this.props.googleDataObject}) 
-  this.setState({ movieInfo: movieData.body }, () => console.log(this.state.movieInfo))
+  this.setState({ movieInfo: movieData.body })
   }
 
   componentDidUpdate(prevProps) {

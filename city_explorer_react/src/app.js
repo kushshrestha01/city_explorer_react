@@ -5,6 +5,7 @@ import Map from './map';
 import SearchForm from './search-form';
 import Weather from './weather';
 import Movies from './movies';
+import Events from './events'
 // import Data from './search-form';
 
 // import SearchResults from './search-results';
@@ -42,6 +43,8 @@ class App extends React.Component {
         />
         
         <Weather googleDataObject = {this.state.location}/>
+
+        <Events search_query = {this.state.location.search_query}/>
 
         <Movies googleDataObject = {this.state.location}/>
 
