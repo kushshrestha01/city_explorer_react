@@ -22,21 +22,29 @@ class Events extends React.Component {
   }
 
   render() {
-    return (
-      <div class = 'Event'>
-      <p>Results from the Eventbrite API
-      <ul>
-      {this.state.eventInfo.length > 0 ? this.state.eventInfo.map(element => {
-        return <li>
-          <p>{element.name}</p>
-          <p>{element.event_date}</p>
-          <a href={element.link}><p>{element.link}</p></a>
-        </li> 
-      }) : 'Nothing to Show'}
-      </ul>
-      </p>
-      </div>
-    )
+    if(this.props.search_query){
+      return (
+        <div class = 'Event'>
+        <p>Results from the Eventbrite API
+        <ul>
+        {this.state.eventInfo.length > 0 ? this.state.eventInfo.map(element => {
+          return <li>
+            <p>{element.name}</p>
+            <p>{element.event_date}</p>
+            <a href={element.link}><p>{element.link}</p></a>
+          </li> 
+        }) : 'Nothing to Show'}
+        </ul>
+        </p>
+        </div>
+      )
+    }
+    
+    else {
+      return (
+        <p></p>
+      )
+    }
   }
 }
 

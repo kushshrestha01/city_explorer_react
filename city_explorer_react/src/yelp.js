@@ -23,6 +23,7 @@ class Yelp extends React.Component {
   }
 
   render() {
+    if(this.props.googleDataObject.search_query) {
     return (
       <div class = 'yelp'>
       <p>Results from the Yelp API
@@ -38,6 +39,12 @@ class Yelp extends React.Component {
       </p>
       </div>
     )
+    }
+    else {
+      return (
+        <p></p>
+      )
+    }
   }
 }
 

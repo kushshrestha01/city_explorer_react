@@ -22,20 +22,27 @@ class Weather extends React.Component {
   }
 
   render() {
-    return (
-      <div class = 'weather'>
-      <p>Results from the Dark Sky API
-      <ul>
-      {this.state.weatherInfo.length > 0 ? this.state.weatherInfo.map(element => {
-        return <li>
-          <p>{element.time}</p>
-          <p>{element.forecast}</p>
-        </li> 
-      }) : 'Nothing to Show'}
-      </ul>
-      </p>
-      </div>
-    )
+    if(this.props.googleDataObject.search_query){
+      return (
+        <div class = 'weather'>
+        <p>Results from the Dark Sky API
+        <ul>
+        {this.state.weatherInfo.length > 0 ? this.state.weatherInfo.map(element => {
+          return <li>
+            <p>{element.time}</p>
+            <p>{element.forecast}</p>
+          </li> 
+        }) : 'Nothing to Show'}
+        </ul>
+        </p>
+        </div>
+      )
+    }
+    else {
+      return (
+        <p></p>
+      )
+    }
   }
 }
 
