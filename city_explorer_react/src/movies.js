@@ -26,7 +26,7 @@ class Movies extends React.Component {
       <div>
       <ul>
       {this.state.movieInfo.length > 0 ? this.state.movieInfo.map(element => {
-        return <li>{element.title + ' ' + element.overview}</li> 
+        return <li>{element.title + ' : ' + element.overview}</li> 
       }) : ''}
       </ul>
       </div>

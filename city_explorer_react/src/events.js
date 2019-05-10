@@ -26,7 +26,7 @@ class Events extends React.Component {
       <div>
       <ul>
       {this.state.eventInfo.length > 0 ? this.state.eventInfo.map(element => {
-        return <li>{element.name + ' ' + element.event_date}</li> 
+        return <li>{element.name + ' , ' + element.event_date}</li> 
       }) : ''}
       </ul>
       </div>

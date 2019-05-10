@@ -26,7 +26,7 @@ class Weather extends React.Component {
       <div>
       <ul>
       {this.state.weatherInfo.length > 0 ? this.state.weatherInfo.map(element => {
-        return <li>{element.time + ' ' + element.forecast}</li> 
+        return <li>{element.time + ' : ' + element.forecast}</li> 
       }) : ''}
       </ul>
       </div>
