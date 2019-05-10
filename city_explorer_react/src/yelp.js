@@ -24,10 +24,14 @@ class Yelp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class = 'yelp'>
       <ul>
       {this.state.yelpInfo.length > 0 ? this.state.yelpInfo.map(element => {
-        return <li>{element.name + ' : ' + element.price}</li> 
+        return <li>
+          <p>{element.name}</p>
+          <p>{element.price}</p>
+          <img src ={element.image_url} alt = 'food' width = '100px' ></img>
+        </li> 
       }) : ''}
       </ul>
       </div>
