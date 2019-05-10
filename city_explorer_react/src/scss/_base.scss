@@ -7,10 +7,10 @@ body {
 .body {
   display: flex;
   flex-wrap: nowrap;
+}
 
-  yelp {
-    outline:solid
-  }
+li {
+  outline: 1px solid black;
 }
 
 .body > div {
@@ -21,6 +21,5 @@ body {
   text-align: center;
   line-height: 75px;
   font-size: 15px;
-  outline: solid;
 }
 

@@ -39,6 +39,7 @@ class App extends React.Component {
           lat = {this.state.location.latitude}
           lng = {this.state.location.longitude}
         />
+
         <div class = 'body'>
         
         <Weather googleDataObject = {this.state.location} />

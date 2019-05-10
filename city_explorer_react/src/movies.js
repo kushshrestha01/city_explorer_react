@@ -24,14 +24,16 @@ class Movies extends React.Component {
   render() {
     return (
       <div class = 'movies'>
+      <p> Movies
       <ul>
       {this.state.movieInfo.length > 0 ? this.state.movieInfo.map(element => {
         return <li>
-          <p>{element.title}</p>
-          <p>{element.overview}</p>
-        </li> 
-      }) : ''}
+            <p>{element.title}</p>
+            <p>{element.overview}</p>
+          </li>
+      }) : 'Nothing to Show'}
       </ul>
+      </p>
       </div>
     )
   }

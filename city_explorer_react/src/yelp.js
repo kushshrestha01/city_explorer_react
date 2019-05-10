@@ -25,6 +25,7 @@ class Yelp extends React.Component {
   render() {
     return (
       <div class = 'yelp'>
+      <p>Yelp
       <ul>
       {this.state.yelpInfo.length > 0 ? this.state.yelpInfo.map(element => {
         return <li>
@@ -32,8 +33,9 @@ class Yelp extends React.Component {
           <p>{element.price}</p>
           <img src ={element.image_url} alt = 'food' width = '100px' ></img>
         </li> 
-      }) : ''}
+      }) : 'Nothing to Show'}
       </ul>
+      </p>
       </div>
     )
   }

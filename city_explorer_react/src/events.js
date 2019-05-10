@@ -23,7 +23,8 @@ class Events extends React.Component {
 
   render() {
     return (
-      <div class = 'event'>
+      <div class = 'Event'>
+      <p>Events
       <ul>
       {this.state.eventInfo.length > 0 ? this.state.eventInfo.map(element => {
         return <li>
@@ -31,8 +32,9 @@ class Events extends React.Component {
           <p>{element.event_date}</p>
           <a href={element.link}><p>{element.link}</p></a>
         </li> 
-      }) : ''}
+      }) : 'Nothing to Show'}
       </ul>
+      </p>
       </div>
     )
   }
