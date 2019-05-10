@@ -25,7 +25,7 @@ class Yelp extends React.Component {
   render() {
     return (
       <div class = 'yelp'>
-      <p>Yelp
+      <p>Results from the Yelp API
       <ul>
       {this.state.yelpInfo.length > 0 ? this.state.yelpInfo.map(element => {
         return <li>

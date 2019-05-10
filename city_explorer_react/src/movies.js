@@ -24,7 +24,7 @@ class Movies extends React.Component {
   render() {
     return (
       <div class = 'movies'>
-      <p> Movies
+      <p> Results from The Movie DB API
       <ul>
       {this.state.movieInfo.length > 0 ? this.state.movieInfo.map(element => {
         return <li>

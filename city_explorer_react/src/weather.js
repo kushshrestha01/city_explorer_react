@@ -24,7 +24,7 @@ class Weather extends React.Component {
   render() {
     return (
       <div class = 'weather'>
-      <p>Weather
+      <p>Results from the Dark Sky API
       <ul>
       {this.state.weatherInfo.length > 0 ? this.state.weatherInfo.map(element => {
         return <li>

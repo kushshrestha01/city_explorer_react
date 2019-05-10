@@ -24,7 +24,7 @@ class Events extends React.Component {
   render() {
     return (
       <div class = 'Event'>
-      <p>Events
+      <p>Results from the Eventbrite API
       <ul>
       {this.state.eventInfo.length > 0 ? this.state.eventInfo.map(element => {
         return <li>
@@ -41,16 +41,3 @@ class Events extends React.Component {
 }
 
 export default Events;
-
-
-        /* <li key={idx}>
-        <p>{ele.title}</p>
-        <p>{ele.released_on}</p>
-        <p>{ele.total_votes}</p>
-        <p>{ele.average_votes}</p>
-        <p>{ele.popularity}</p>
-        <img src={ele.image_url} alt='IMG'></img>
-        <p>{ele.overview}</p>
-        </li> */
-      // <a href={ele.url}><p>{ele.name}</p></a>
-      // <img src ={ele.image_url}></img>
